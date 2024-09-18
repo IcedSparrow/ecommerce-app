@@ -33,4 +33,4 @@ Aplikacja została stworzona z użyciem następujących technologii:
 Aby uruchomić aplikację na swoim komputerze, wykonaj następujące kroki:
 1. Sklonuj repozytorium na swój komputer:
    ```bash
-   git clone https://github.com/yourusername/ecommerce-app.git
+   https://github.com/IcedSparrow/ecommerce-app.git
