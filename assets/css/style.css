@@ -1,0 +1,456 @@
+/* Resetowanie domyślnych stylów przeglądarki */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stylizacja ciała dokumentu */
+body {
+    font-family: Arial, sans-serif; /* Użycie czcionki Arial */
+    line-height: 1.6; /* Wysokość linii dla lepszej czytelności */
+    background-color: #f4f4f4; /* Tło strony */
+    color: #333; /* Kolor tekstu */
+    margin: 0; /* Usunięcie domyślnych marginesów */
+    padding: 0; /* Usunięcie domyślnych wypełnień */
+}
+
+/* Stylizacja nagłówków */
+h1, h2, h3 {
+    color: #b4b4b4; /* Użycie ciemniejszego koloru dla nagłówków */
+    margin-bottom: 15px; /* Odstęp poniżej nagłówków */
+}
+
+/* Stylizacja akapitów */
+p {
+    margin-bottom: 20px; /* Odstęp poniżej akapitów */
+    font-size: 1em; /* Rozmiar czcionki akapitów */
+}
+
+
+
+/* Stylizacja przycisków */
+button {
+    background-color: #28a745; /* Kolor tła przycisku */
+    color: #fff; /* Kolor tekstu przycisku */
+    border: none; /* Brak ramki */
+    padding: 10px 15px; /* Wypełnienie przycisku */
+    border-radius: 5px; /* Zaokrąglenie rogów przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    transition: background 0.3s; /* Animacja koloru tła */
+}
+
+button:hover {
+    background-color: #218838; /* Zmiana koloru tła przy najeździe */
+}
+
+/* Stylizacja linków */
+a {
+    color: #007bff; /* Kolor linków */
+    text-decoration: none; /* Brak podkreślenia */
+}
+
+a:hover {
+    text-decoration: underline; /* Podkreślenie linków przy najeździe */
+}
+
+
+/* Stylizacja nagłówka */
+header {
+    background: #333; /* Kolor tła nagłówka */
+    color: #fff; /* Kolor tekstu */
+    padding: 20px 0; /* Wewnętrzne odstępy */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Cień pod nagłówkiem */
+}
+
+/* Stylizacja tytułu w nagłówku */
+header h1 {
+    text-align: center; /* Wyśrodkowanie tytułu */
+    font-size: 2.5em; /* Rozmiar czcionki tytułu */
+    margin-bottom: 10px; /* Odstęp dolny */
+    text-transform: uppercase; /* Duże litery */
+    letter-spacing: 2px; /* Odstępy między literami */
+}
+
+/* Nawigacja */
+nav {
+    display: flex; /* Użycie flexboxa dla nawigacji */
+    justify-content: center; /* Wyśrodkowanie linków */
+    margin: 10px 0; /* Odstęp górny i dolny */
+    background: #444; /* Tło nawigacji */
+    padding: 10px 0; /* Wewnętrzne odstępy */
+    border-radius: 5px; /* Zaokrąglenie krawędzi */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Cień pod nawigacją */
+}
+
+/* Stylizacja linków w nawigacji */
+nav a {
+    color: #fff; /* Kolor tekstu linków */
+    text-decoration: none; /* Usunięcie podkreślenia */
+    padding: 10px 20px; /* Wewnętrzne odstępy */
+    border-radius: 5px; /* Zaokrąglenie krawędzi linków */
+    transition: background 0.3s, transform 0.3s; /* Efekt przejścia */
+    margin: 0 10px; /* Odstępy między linkami */
+}
+
+/* Efekt najechania na linki */
+nav a:hover {
+    background: #555; /* Kolor tła przy najechaniu */
+    transform: scale(1.05); /* Efekt powiększenia */
+}
+
+/* Stylizacja aktywnego linku */
+nav a.active {
+    background: #28a745; /* Kolor tła dla aktywnego linku */
+    font-weight: bold; /* Pogrubienie tekstu aktywnego linku */
+}
+
+/* Stylizacja dla mediów społecznościowych w nawigacji */
+nav .social-icons {
+    margin-left: 20px; /* Odstęp z lewej dla ikon społecznościowych */
+}
+
+nav .social-icons a {
+    font-size: 1.5em; /* Rozmiar ikon */
+    margin: 0 5px; /* Odstęp między ikonami */
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Układ pionowy w mniejszych ekranach */
+    }
+
+    nav a {
+        margin: 5px 0; /* Odstęp pionowy między linkami */
+    }
+}
+
+
+/* Kontener główny */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Stylizacja listy produktów */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Produkt */
+.product {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+/* Przyciski usuwania */
+.remove-button {
+    color: #dc3545; /* Kolor czerwony dla usuwania */
+    text-decoration: none;
+}
+
+.remove-button:hover {
+    text-decoration: underline;
+}
+
+/* Stylizacja przycisków */
+button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Stylizacja koszyka */
+.cart {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart th, .cart td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.cart th {
+    background: #f2f2f2;
+}
+
+/* Stylizacja kontenera szczegółów produktu */
+.product-details {
+    background-color: #fff; /* Białe tło dla sekcji szczegółów produktu */
+    padding: 20px; /* Wewnętrzne odstępy */
+    border-radius: 5px; /* Zaokrąglone krawędzie */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+    max-width: 800px; /* Maksymalna szerokość kontenera */
+    margin: 20px auto; /* Wyśrodkowanie kontenera */
+}
+
+/* Stylizacja nagłówka produktu */
+.product-details h1 {
+    font-size: 2.5em; /* Duża czcionka dla nagłówka */
+    color: #333; /* Ciemnoszary kolor tekstu */
+    margin-bottom: 15px; /* Odstęp dolny */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+/* Stylizacja obrazu produktu */
+.product-details img {
+    max-width: 100%; /* Obraz dostosowuje się do szerokości kontenera */
+    height: auto; /* Utrzymanie proporcji obrazu */
+    display: block; /* Blokowe wyświetlanie, aby usunąć odstępy */
+    margin: 0 auto 20px; /* Wyśrodkowanie obrazu z dolnym odstępem */
+}
+
+/* Stylizacja opisu produktu */
+.product-details p {
+    font-size: 1.1em; /* Lekko powiększona czcionka */
+    color: #555; /* Jaśniejszy szary kolor tekstu */
+    line-height: 1.6; /* Zwiększenie odstępów między wierszami */
+    margin-bottom: 15px; /* Odstęp dolny */
+}
+
+/* Stylizacja nagłówka ceny */
+.product-details h2 {
+    font-size: 1.8em; /* Rozmiar czcionki dla ceny */
+    color: #28a745; /* Zielony kolor dla ceny */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    margin: 10px 0; /* Odstępy górny i dolny */
+}
+
+/* Stylizacja formularza */
+.product-details form {
+    display: flex; /* Użycie flexboxa do ułożenia elementów w formularzu */
+    justify-content: center; /* Wyśrodkowanie elementów */
+    align-items: center; /* Wyśrodkowanie w pionie */
+    margin-top: 20px; /* Odstęp górny */
+}
+
+/* Stylizacja etykiety */
+.product-details label {
+    margin-right: 10px; /* Odstęp między etykietą a polem */
+}
+
+/* Stylizacja pola ilości */
+.product-details input[type="number"] {
+    width: 60px; /* Szerokość pola ilości */
+    padding: 5px; /* Wewnętrzne odstępy */
+    border: 1px solid #ddd; /* Szare obramowanie */
+    border-radius: 3px; /* Zaokrąglenie krawędzi */
+}
+
+/* Stylizacja przycisku dodania do koszyka */
+.product-details button {
+    background-color: #28a745; /* Zielony kolor tła */
+    color: #fff; /* Kolor tekstu */
+    padding: 10px 15px; /* Wewnętrzne odstępy */
+    border: none; /* Bez obramowania */
+    border-radius: 5px; /* Zaokrąglenie krawędzi */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    transition: background 0.3s; /* Efekt przejścia */
+    margin-left: 10px; /* Odstęp między polem a przyciskiem */
+}
+
+.product-details button:hover {
+    background-color: #218838; /* Ciemniejszy zielony kolor przy najechaniu */
+}
+
+/* Stylizacja przycisku Details */
+.details-button {
+    background-color: #007bff; /* Kolor tła przycisku */
+    color: #fff; /* Kolor tekstu */
+    padding: 10px 20px; /* Wewnętrzne odstępy */
+    border: none; /* Brak obramowania */
+    border-radius: 5px; /* Zaokrąglenie krawędzi */
+    font-size: 1em; /* Rozmiar czcionki */
+    cursor: pointer; /* Kursor wskazujący, że element jest klikalny */
+    transition: background-color 0.3s, transform 0.2s; /* Efekty przejścia */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    display: inline-block; /* Wyświetlanie jako blok inline */
+    text-decoration: none; /* Usunięcie podkreślenia */
+}
+
+/* Efekt najechania na przycisk */
+.details-button:hover {
+    background-color: #0056b3; /* Zmiana koloru tła przy najechaniu */
+    transform: translateY(-2px); /* Efekt uniesienia przy najechaniu */
+}
+
+/* Stylizacja przycisku w stanie aktywnym */
+.details-button:active {
+    background-color: #004494; /* Zmiana koloru tła, gdy przycisk jest kliknięty */
+    transform: translateY(0); /* Powrót do pierwotnej pozycji */
+}
+
+/* Stylizacja dla przycisku w kontekście responsywności */
+@media (max-width: 768px) {
+    .details-button {
+        width: 100%; /* Ustawia szerokość na 100% w małych ekranach */
+        font-size: 1.2em; /* Zwiększenie rozmiaru czcionki na mniejszych ekranach */
+    }
+}
+
+/* Formularz dodawania do koszyka */
+.add-to-cart-form {
+    margin-top: 20px;
+}
+
+.add-to-cart-form input[type="number"] {
+    width: 80px;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Stylizacja stopki */
+footer {
+    background-color: #333; /* Kolor tła stopki */
+    color: #fff; /* Kolor tekstu */
+    padding: 20px 0; /* Wewnętrzne odstępy */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    position: relative; /* Umożliwia odpowiednie pozycjonowanie wewnętrznych elementów */
+}
+
+footer .container {
+    max-width: 1200px; /* Maksymalna szerokość kontenera */
+    margin: auto; /* Wyśrodkowanie kontenera */
+    padding: 0 20px; /* Wewnętrzne odstępy */
+}
+
+footer p {
+    margin-bottom: 10px; /* Odstęp dolny od tekstu */
+    font-size: 0.9em; /* Rozmiar czcionki */
+}
+
+footer .social-media {
+    list-style: none; /* Usunięcie punktów listy */
+    padding: 0; /* Usunięcie odstępu */
+    display: flex; /* Flexbox dla elastycznego rozmieszczenia */
+    justify-content: center; /* Wyśrodkowanie elementów listy */
+    gap: 15px; /* Odstępy między elementami listy */
+}
+
+footer .social-media li {
+    display: inline; /* Wyświetlanie elementów listy w linii */
+}
+
+footer .social-media a {
+    color: #fff; /* Kolor linków */
+    text-decoration: none; /* Usunięcie podkreślenia */
+    transition: color 0.3s; /* Efekt przejścia koloru */
+}
+
+footer .social-media a:hover {
+    color: #1e90ff; /* Kolor przy najechaniu */
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    footer .social-media {
+        flex-direction: column; /* Kolumna w małych ekranach */
+    }
+}
+
+/* Nagłówek formularza */
+h2 {
+    text-align: center; /* Wyśrodkowanie nagłówka */
+    color: #333; /* Kolor tekstu nagłówka */
+    margin-bottom: 20px; /* Odstęp dolny */
+}
+
+/* Stylizacja formularza */
+form {
+    max-width: 600px; /* Maksymalna szerokość formularza */
+    margin: auto; /* Wyśrodkowanie formularza */
+    background: #fff; /* Kolor tła formularza */
+    padding: 20px; /* Wewnętrzne odstępy */
+    border-radius: 8px; /* Zaokrąglenie krawędzi */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Cień formularza */
+}
+
+/* Stylizacja etykiet */
+label {
+    display: block; /* Blokowy wyświetlacz dla etykiet */
+    margin-bottom: 5px; /* Odstęp dolny */
+    font-weight: bold; /* Pogrubienie tekstu etykiet */
+}
+
+/* Stylizacja pól tekstowych */
+input[type="text"] {
+    width: 100%; /* Szerokość 100% */
+    padding: 10px; /* Wewnętrzne odstępy */
+    margin-bottom: 20px; /* Odstęp dolny */
+    border: 1px solid #ccc; /* Obramowanie */
+    border-radius: 4px; /* Zaokrąglenie krawędzi */
+    font-size: 1em; /* Rozmiar czcionki */
+}
+
+/* Stylizacja przycisku */
+button {
+    background-color: #28a745; /* Kolor tła przycisku */
+    color: #fff; /* Kolor tekstu */
+    border: none; /* Brak obramowania */
+    padding: 10px 15px; /* Wewnętrzne odstępy */
+    border-radius: 5px; /* Zaokrąglenie krawędzi */
+    cursor: pointer; /* Kursor wskazujący, że przycisk jest klikalny */
+    font-size: 1em; /* Rozmiar czcionki */
+    transition: background-color 0.3s; /* Efekt przejścia koloru */
+}
+
+/* Efekt najechania na przycisk */
+button:hover {
+    background-color: #218838; /* Zmiana koloru tła przy najechaniu */
+}
+
+/* Stylizacja dla mediów społecznościowych */
+@media (max-width: 768px) {
+    form {
+        padding: 15px; /* Mniejsze wewnętrzne odstępy w mniejszych ekranach */
+    }
+    
+    button {
+        width: 100%; /* Szerokość przycisku na 100% w małych ekranach */
+    }
+}
